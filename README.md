@@ -1,4 +1,4 @@
-# DSusoku
+# DSudoku
 Danis Sudoku
 
 
