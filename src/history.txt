@@ -1,0 +1,46 @@
+ToDos:
+
+	- vollständig mit SudokuItems impl. ?? bin unschlüssig
+	- Testen, Lösen und generieren in statusRow im Help-Text erklären
+	"selber lösen" im Helptext erklären, Erklärungen für Papi auf Öffentlichkeitstauglichkeit prüfen
+	- MainFrame mal ausmisten, alle Funktionen, die Tools-Charakter haben raus
+
+BUGS:
+	- falsches Feld wurde gelb statt rot, SudokuItem mit show ausstatten
+	- Vektor sv war für ein Feld plötzlich leer
+	- ab und zu kommt generate mit mehrdeutigen Lösungen zurück ???
+		zum Analysieren Zwischenergebnisse am besten in Datei schreiben und import Funktion impl.
+
+History:
+	2.3 vom 1.4.21:
+		e Texte überarbeitet wegen Öffentlichkeitstauglichkeit
+		   war für meinen Papa geschrieben, ü80 damals und etwas übertrieben erklärt
+	2.2.2 vom 19.02.08:
+		+ Funktionen erklärt und Hilfe aktualisieren 
+		+ noch ein weiteres Muster bei Sudoku generieren impl.
+		- ein weiteres noch offen
+	2.2.1 vom 17.02.08:
+		lange nichts mehr dran gemacht, nachdem extrahieren der Matrix in extra Klasse
+		Probleme bei Fenstergrößenänderungen mit sich brachte, teilweise wieder Rückzug 
+		hier und schnellstmögliche Korrektur, um eine lauffähige Appl. für Sebi mal hinzukriegen
+
+	2.1 vom 05.09.07
+		- Animation während Sudoku im Thread generieren
+	2.0 vom 17.06.07
+		+ generieren von Sudokus funktioniert prinzipiell aber langsam
+		+ Lösungszufall bei TryAndErrorTesting weiter vergrößert durch zufälliges Untermischen
+			der Vektoren beim Einordnen
+
+
+	1.3.0 vom 06.06.07
+		+ verteilen Source-Code auf mehrere Dateien: SudokuApplication 
+		+ prüfen des Sudokus bis zur Lösung schon zu Beginn
+	1.2.0 vom 03.06.07
+		+ spielen möglich
+	 	0 Umbau / Einbau SudokuItem-Klasse SEITDEM vereinzelt npe-s bei Wechsel aut. 
+	 		lösen oder per Hand
+	1.1.2 vom 02.06.07
+		+ shakeVektor() in SudokuItem für zufälligere Lösungen
+		+ nach "Werte einlesen" zeigeMöglichkeiten rücksetzen
+		+ Werte merken in Statuszeile bestätigen, ansonsten bei Button-Actions Statuszeile löschen
+	1.0 erste verteilte funktionsfähige Version an Papi und Micha

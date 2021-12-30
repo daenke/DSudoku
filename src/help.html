@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.1.2.2 (Linux)"/>
+	<meta name="created" content="2007-05-26T00:00:00.015222700"/>
+	<meta name="changedby" content="Daniel Enke"/>
+	<meta name="changed" content="2021-04-01T10:45:40.745461882"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin-left: 2cm; margin-right: 1cm; margin-top: 1cm; margin-bottom: 1cm }
+		p { margin-bottom: 0.25cm; background: transparent; line-height: 115%; background: transparent }
+		dd { margin-left: 1cm; background: transparent; background: transparent }
+		h1 { margin-bottom: 0.21cm; background: transparent; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
+		h1.cjk { font-family: "WenQuanYi Zen Hei"; font-size: 24pt; font-weight: bold }
+		h1.ctl { font-family: "FreeSans"; font-size: 24pt; font-weight: bold }
+		blockquote { margin-left: 1cm; margin-right: 1cm; background: transparent; background: transparent }
+		h3 { margin-top: 0.25cm; margin-bottom: 0.21cm; background: transparent; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "WenQuanYi Zen Hei"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "FreeSans"; font-size: 14pt; font-weight: bold }
+		h2 { margin-top: 0.35cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt; font-weight: bold }
+		h2.cjk { font-family: "WenQuanYi Zen Hei"; font-size: 16pt; font-weight: bold }
+		h2.ctl { font-family: "FreeSans"; font-size: 16pt; font-weight: bold }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+		a:visited { color: #800000; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="de-DE" link="#000080" vlink="#800000" dir="ltr"><p>Hallo
+zusammen,</p>
+<p>das hier ist ein Programm zum Spielen, Lösen und Erstellen von
+Sudokus.<br/>
+Durch Implementierung n JAVA läuft es auf einer
+virtuellen Maschine, also unabhängig welche OS (Windows, Linux ...)</p>
+<p>Was kannst du nun mit dem Programm machen?</p>
+<dl>
+	<dd>- den Computer Sudokus vollständig lösen lassen</dd><dd>
+	- den Computer Sudokus schrittweise lösen lassen</dd><dd>
+	<br/>
+
+	</dd><dd>
+	- Beispiel-Sudokus am Computer lösen oder ihn lösen lassen</dd><dd>
+	- Sudokus an einem bestimmten Punkt (wo man z.B. nicht weiter kommt)
+	analysieren</dd><dd>
+	- man kann sogar Sudokus damit selbst erstellen (Sudokus generieren)</dd><dd>
+	- Sudokus (eigene oder generierte) am Bildschirm spielen</dd><dd style="margin-bottom: 0.5cm">
+	- Probiere z.B. mal das sudoku (nach „Werte einlesen“) ohne eine
+	Zahl darin zu starten! :)</dd></dl>
+<p style="margin-bottom: 0.5cm">
+Probier einfach mal aus, nur eine Zahl in das Sudoku einzufüllen
+(oder mal gar keine) und schau dann mal, wie er damit umgeht bei der
+Lösung.</p>
+<h1 class="western">Erklärung der Oberfläche und ihrer Bereiche</h1>
+<p>In der Mitte ist der Spielbrett-Bereich des Sudokus. Die Kästchen
+können Farben annehmen, je nachdem, was für einen Status das Feld
+im Sudoku hat. Diese Aufbereitung des Sudokus erfolgt, wenn du den
+Button &quot;Werte einlesen&quot; drückst.</p>
+<p>Die Farben sind:</p>
+<blockquote>- GRÜN: gegebene Zahlen</blockquote>
+<blockquote>- WEISS: offene Zahlen (zu lösende Kästchen)</blockquote>
+<blockquote>- ROT (tiefrot): Eingabe / Feld steht im Widerspruch zu
+Sudoku-Regeln (falsche Eingaben oder nicht gültige Zahlen werden
+nicht eingelesen und nicht angezeigt)</blockquote>
+<blockquote>- HELLROT: zeigt die Schwierigkeit des Feldes in bezug
+auf dessen Lösung an, beim selber lösen also immer mit den hellsten
+beginnen</blockquote>
+<blockquote>- GELB: aktuelles Feld (als letztes gelöst)</blockquote>
+<p>Links und rechts sind die Aktions-Schaltflächen, die auch weiter
+unten noch erklärt werden. Wenn du mit der Maus etwas über den
+Kästchen liegen bleibst, ohne zu klicken, werden dir nach kurzer
+Zeit auch Hilfen für jeden Button und zur Aktivierung der Funktion
+über die Tastatur angeboten.</p>
+<p>Hier nur kurz:</p>
+<dl>
+	<dd>- Hilfe: Zeigt diesen Text an</dd><dd>
+	- Beispiel 01: Hier kann über eine Liste ein vorgegebenes Beispiel
+	ausgesucht werden</dd><dd>
+	- Beispiel ausfüllen: Trägt das Beispiel ins Sudoku ein</dd><dd>
+	- Sudokus generieren</dd><dd>
+	- Zeige Möglichkeiten: Zeigt mögliche Eintragungsmöglichkeiten in
+	den Feldern an<br/>
+(die zu einer korrekten Lösung führen)</dd><dd>
+	<br/>
+
+	</dd><dd>
+	- Werte merken: Hiermit kannst zu Werte des Sudokus während einer
+	Sitzung zwischenspeichern</dd><dd>
+	- Werte löschen: Löscht das Spielbrett</dd><dd style="margin-bottom: 0.5cm">
+	- Werte einsetzen: Setzt die vorher gemerkten Werte wieder in das
+	Spielbrett ein</dd></dl>
+<p>
+Diesen Bereich kannst du gut dafür verwenden, ein einmal
+eingegebenes Sudoku mehrmals zu bearbeiten aber auch um einen
+Bearbeitungsstand am Sudoku zu MERKEN, auf dem du später aufsetzend
+weiterspielen willst. Aber Vorsicht: Nach Schließen und neuem Öffnen
+des Programms sind diese Werte (in der momentanen Version) nicht mehr
+gespeichert und nicht mehr abrufbar.</p>
+<p>Unter dem Spielbrett ist noch eine Statuszeile. Sie gibt dir
+weitere Informationen über Falscheingaben, wieviele Felder noch zu
+lösen sind und wieviele Zahlen rein theoretisch noch in diesen
+offenen Felder eingetragen werden können. Am Schluß gibt es darüber
+Auskunft, ob ein Sudoku eineindeutig in seiner Lösung war (d.h. es
+gab nur eine Lösung) oder ob es mehrere Lösungsmöglichkeiten dafür
+gibt. 
+</p>
+<h1 class="western">Zu den Möglichkeiten und Funktionen im einzelnen</h1>
+<h3 class="western">Den Computer eigene (selbst eingegebene) Sudokus
+vollständig lösen lassen</h3>
+<dl>
+	<dd>1. bekannte Zahlen in die Felder eintragen</dd><dd>
+	2. &quot;Werte einlesen&quot; drücken</dd><dd style="margin-bottom: 0.5cm">
+	3. &quot;Vollständig lösen&quot; drücken und zuschauen wie er
+	arbeitet :-)</dd></dl>
+<p style="margin-bottom: 0cm">
+<br/>
+
+</p>
+<h3 class="western">Den Computer eigene (selbst eingegebene) Sudokus
+schrittweise lösen lassen</h3>
+<dl>
+	<dd>1. bekannte Zahlen in die Felder eintragen</dd><dd>
+	2. &quot;Werte einlesen&quot; drücken</dd><dd style="margin-bottom: 0.5cm">
+	3. &quot;Schrittweise lösen&quot; drücken (so oft man will)</dd></dl>
+<p style="margin-bottom: 0cm">
+<br/>
+
+</p>
+<h3 class="western">Sudokus selber am Computer lösen mit
+verschiedenen Graden zur Hilfestellung</h3>
+<p>Nach &quot;Werte einlesen&quot; zeigt er durch unterschiedliche
+Rotstufen den Schwierigkeitsgrad eines Feldes an. Je dunkelroter das
+Feld ist, desto mehr offene Möglichkeiten gibt es auf dem Feld noch.
+Offene Möglichkeiten sind dabei Zahlen, die eingetragen werden
+könnten und noch nicht ausgeschlossen wurden. Man kann sich diese
+Zahlen mit dem Kästchen &quot;Zeige Möglichkeiten&quot; (links
+unten) anzeigen lassen. Da dabei mehrere Zahlen in ein Feld
+geschrieben werden, ist es praktisch, sich hierzu das Fenster
+(Spielfeld) zu vergrößern oder größer zu ziehen. Das Feld mit dem
+Kästchen ist anwählbar erst nachdem man &quot;Werte einlesen&quot;
+gedrückt hat, weil erst dann diese Datenvektoren mit offenen
+Möglichkeiten erstellt werden.</p>
+<p><br/>
+<br/>
+
+</p>
+<h3 class="western">Beispiel-Sudokus am Computer lösen oder ihn
+lösen lassen</h3>
+<p>Beispiel aus der Liste wählen dann &quot;Beispiel ausfüllen&quot;
+drücken. Danach mit Lösen fortfahren wie oben beschrieben.</p>
+<p><br/>
+<br/>
+
+</p>
+<h3 class="western">Sudokus an einem bestimmten Punkt (wo man z.B.
+nicht weiter kommt) analysieren</h3>
+<p>Einfach das Sudoku im Anfangszustand eingeben und lösen lassen
+oder den aktuellen Bearbeitungsstand eingeben und den Computer prüfen
+lassen, ob schon Fehler enthalten sind oder man auf dem richtigen Weg
+ist. 
+</p>
+<p><br/>
+<br/>
+
+</p>
+<h3 class="western">Man kann <font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>auch</b></font></font>
+Sudokus damit <font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>durch
+eigene Eingaben</b></font></font> erstellen</h3>
+<p>Wie vorhin gesagt, einfach mal ein paar Zahlen eingeben, diese
+dann merken und den Computer rechnen lassen, ob die Eingaben gültig
+waren und ob es zu einer eindeutigen Lösung des Sudokus kommt. Wenn
+nicht, den Zwischenstand einsetzen modifizieren, wieder merken lassen
+und neu prüfen. Bei unter 100 Lösungsmöglichkeiten eines Sudokus
+zeigt er dir an, wieviele es gab.</p>
+<p><br/>
+<br/>
+
+</p>
+<h3 class="western">Sudokus am Bildschirm spielen (ab Version 2)</h3>
+<p>Du kannst Sudoku-Felder lösen und diese einfach eingeben (vorher
+– am Beginn sind die Werte wie üblich einzulesen). Er prüft dann
+sofort die Eingaben und informiert dich falls erforderlich über
+Fehler.</p>
+<p><br/>
+<br/>
+
+</p>
+<h3 class="western">Sudokus generieren (ab Version 2)</h3>
+<p>Nun kannst du auch eigene Sudokus damit generieren. Sie werden
+zufällig erzeugt und haben auch eine zufällige gewählte
+Schwierigkeitsstufe.</p>
+<p><br/>
+<br/>
+
+</p>
+<h3 class="western">Beenden des Programmes</h3>
+<p>Einfach mit dem Fensterbutton (oben rechts das x meist) schließen.</p>
+<p><br/>
+<br/>
+
+</p>
+<h1 class="western">Wenn du die Quellen anschauen willst?</h1>
+<p>Die Ausführung des Codes startet mit der Methode main() in der
+Datei SudokuApplication.java.</p>
+<p>Dort ist ein guter Punkt zum Einstieg in den Code, wenn du dir
+anschauen willst, wie er vorgeht beim Lösen … von Sudokus!</p>
+<p>Die Algorithmen zum Lösen von Sudokus folgen den
+Gedankenschritten, die auch ein Mensch macht, beim Lösen von
+Sudokus. Die Zellenauswahl, mit der er grad arbeitet, erfolgt
+zufällig. Er verwendet hier 3-4 verschiedene Methoden zum lösen von
+sudokus, die in eigene Methoden (oder Kommetarzeilen) gebündelt
+sind. Allgemein ist der Code viel kommentiert.</p>
+<p>Wenn er mal nicht mehr weiterkommt, verwendet er eine
+Testen-Methode, mit der er (mit Brute-Force Strategie) einfach mal
+das ganze sudoku durchrechnet, ob er auf Fehler kommt und dann
+zurückkehrt nur mit dem Wert, könnte klappen – oder geht schief.
+Die Häufigkeit der Anwendung dieses Mechanismus zeigt er in der
+Statuszeile dann an als „Testen verwendet“...</p>
+<p><br/>
+<br/>
+
+</p>
+<h2 class="western">Viel Spaß damit</h2>
+<p><br/>
+<br/>
+
+</p>
+<p>Viele Grüße von</p>
+<p>Dani</p>
+</body>
+</html>
